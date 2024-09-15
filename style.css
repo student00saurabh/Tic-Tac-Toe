@@ -1,0 +1,96 @@
+.main{
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+button{
+   color: blue;
+   border: 2px solid aqua;
+   border-radius: 5px;
+   padding: 5px;
+   display: block;
+}
+button:hover{
+	color: black;
+	background-color: aqua;
+	box-shadow: 0px 2px 2px black;
+}
+
+/* for mobile */
+@media(max-width:390px){
+	.box2{
+	   margin: 20px;
+    }
+
+	table,td,th,tr{
+	border: 2px solid aqua;
+	padding: 20px;
+	background-color: aqua;
+}
+table{
+	border: 2px solid black;
+	padding: 5px;
+}
+.st-td{
+	height: 20px;
+	width: 20PX;
+	font-size: 1.5rem;
+	background-color: azure;
+   text-shadow: #FC0 1px 0 10px;
+}
+.sc,.rec-1,.rec-2{
+	height: 5px;
+	width: 5px;
+}
+.box3{
+	margin: 20px;
+	text-align: center;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+}
+
+/* for dextop */
+@media(min-width:390px){
+    .box1{
+	  display: flex;
+	  justify-content: space-evenly;
+    }
+
+	td,th,tr,table{
+	border: 2px solid aqua;
+	padding: 20px;
+	background-color: aqua;
+}
+.st-td{
+	height: 20px;
+	width: 20PX;
+	font-size: 1.5rem;
+	background-color: azure;
+   text-shadow: #FC0 1px 0 10px;
+}
+table{
+	border: 2px solid black;
+}
+
+.box2{
+	margin: 20px;
+	margin-top: 80px;
+	text-align: center;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+.box3{
+	margin: 20px;
+	text-align: center;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+}
