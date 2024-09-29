@@ -25,6 +25,18 @@ button:hover{
 	background-color: aqua;
 	display: none;
 }
+.audio1{
+	display: none;
+}
+.audio2{
+	display: none;
+}
+.audio-div{
+	text-align: left;
+	background-color: aqua;
+	padding: 10px;
+	border-radius: 10px;
+}
 
 /* for mobile */
 @media(max-width:390px){

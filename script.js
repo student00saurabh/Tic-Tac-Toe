@@ -21,6 +21,10 @@ let sc2 = document.querySelector(".rec-2");
 
 let tds = document.querySelectorAll("td")
 
+let audio1 = document.querySelector(".audio1");
+let audio2 = document.querySelector(".audio2");
+let audioDiv = document.querySelector(".audio-div");
+
 // const names = require("./app.js");
 // console.log(names[0]);
 // console.log(names[1]);
@@ -32,8 +36,37 @@ let player3;
 let num1 = 0;
 let num2 = 0;
 
+audio_play = false;
+
+function audiofn(){
+	audio1.style.display = "block";	
+	audio1.autoplay = true;
+}
+
+function clickaudio(){
+    audio2.style.display = "block";
+	audio2.autoplay = true;
+}
+
+audioDiv.addEventListener("click", ()=>{
+	if(audio_play == true){
+		audioDiv.innerText = "Off";
+		audio1.setAttribute("src", " ");	
+		audio2.setAttribute("src", "sound.wav");
+		audio_play = false;
+	}
+	else if(audio_play == false){
+		audioDiv.innerText = "On";
+		audio1.setAttribute("src", "bgm1.mp3");
+		audio2.setAttribute("src", " ");
+		audio_play = true;
+	}
+})
+
 btn.addEventListener("click", (event)=>{
 	n = true;
+	clickaudio();
+	audiofn();
     let img = document.querySelector(".win-img");
 	img.style.display = "none";
 	table.style.display = "block";
@@ -49,6 +82,7 @@ btn.addEventListener("click", (event)=>{
 		c2.innerText = " ";
 		c3.innerText = " ";
 		h1.innerText = "Player1";
+		h2.innerText = " ";
 		player1 = 1;
 		player2 = 0;
 	}
@@ -61,6 +95,7 @@ let h2 = document.querySelector("h2");
 table.addEventListener("click", function (event) {
 	if ((player1 == 1 && player2 == 0)&& (event.target.nodeName == "TD") && (n ==true)) {
 		h1.innerText = "player2: x";
+		clickaudio();
 		let abcd = event.target;
 		abcd.style.color = "green"
 		abcd.innerText = "x";
@@ -71,6 +106,7 @@ table.addEventListener("click", function (event) {
 	}
 	else if((player1 == 0 && player2 == 1)&& (event.target.nodeName == "TD")){
 		h1.innerText = "player1: 0";
+		clickaudio();
 		let abc = event.target;
 		abc.innerText = "0";
 		abc.style.color = "red"
