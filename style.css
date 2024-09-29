@@ -19,6 +19,12 @@ button:hover{
 	background-color: aqua;
 	box-shadow: 0px 2px 2px black;
 }
+.win-img{
+	height: 200px;
+	width: 200px;
+	background-color: aqua;
+	display: none;
+}
 
 /* for mobile */
 @media(max-width:390px){
